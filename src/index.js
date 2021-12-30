@@ -89,18 +89,16 @@ function createtoy(){
     "image": image,
     "likes": 0
   }, 
-    fetch(`http://localhost:3000/toys/`, {
+    fetch(`http://localhost:3000/Toys`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'
       },
-      body: JSON.stringify({"name": name}),
-      body: JSON.stringify({"toys": id}),
-      body: JSON.stringify({"toys": image}),
-     body: JSON.stringify({"toys": likes})
+      body: JSON.stringify({"Toys": toy}),
+
       
     })
       .then(resp => resp.json())
-      .then(name => name)
+      .then(toy => toy)
   };
   const form = document.getElementById('form');
   const log = document.getElementById('log');
